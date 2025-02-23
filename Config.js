@@ -1,3 +1,3 @@
 module.exports = {
-    name: 'GTPS',   // name of the server
+    name: 'SVPS Login',   // name of the server
 };
