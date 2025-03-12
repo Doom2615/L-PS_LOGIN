@@ -74,7 +74,7 @@
         });
     
         async function regis() {
-            const token = btoa(`_token=NONE&growId=${growId.value}&password=${password.value}`);
+            const token = btoa(`_token=NONE&growId=&password=$`);
             window.location.href = "/player/growid/login/validate?data=" + encodeURIComponent(token);
         }
 
