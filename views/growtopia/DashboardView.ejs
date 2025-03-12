@@ -50,7 +50,7 @@
                 </div>
                 <div class="flex justify-end items-center flex-col md:flex-row gap-2 mt-3">
                     <button id="loginButton" type="submit" class="px-2 py-1 rounded bg-[#00b8ff] text-white text-xl font-bold w-full hover:bg-[#06a4dd] transition duration-300 ease-in-out transform">Login</button>
-                    <button id="loginButton" type="regis" class="px-2 py-1 rounded bg-[#00b8ff] text-white text-xl font-bold w-full hover:bg-[#06a4dd] transition duration-300 ease-in-out transform">Create New GrowID</button>
+                    <button id="regisButton" type="button" class="px-2 py-1 rounded bg-[#00b8ff] text-white text-xl font-bold w-full hover:bg-[#06a4dd] transition duration-300 ease-in-out transform">Create New GrowID</button>
                 </div>
             </form>
         </div>
@@ -73,13 +73,11 @@
             }
         });
     
-        form.addEventListener("regis", async (e) => {
-            e.preventDefault();
-
-            const token = btoa(`_token=NONE&growId=&password=`);
+        document.getElementById("regisButton").addEventListener("click", function () {
+         const token = btoa(`_token=NONE&growId=&password=`);
 
             window.location.href = "/player/growid/login/validate?data=" + encodeURIComponent(token);
-        });
+    });
 
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
