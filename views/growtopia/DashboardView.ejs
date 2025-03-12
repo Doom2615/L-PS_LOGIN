@@ -66,10 +66,10 @@
             const LpasswordFieldType = LpasswordField.getAttribute('type');
             if (LpasswordFieldType === 'password') {
                 LpasswordField.setAttribute('type', 'text');
-                this.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                this.innerHTML = '<i class="fas fa-eye"></i>';
             } else {
                 LpasswordField.setAttribute('type', 'password');
-                this.innerHTML = '<i class="fas fa-eye"></i>';
+                this.innerHTML = '<i class="fas fa-eye-slash"></i>';
             }
         });
     
