@@ -1,3 +1,3 @@
 module.exports = {
-    name: 'SVPS Login',   // name of the server
+    name: 'L-PS Login',   // name of the server
 };
