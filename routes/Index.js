@@ -14,6 +14,9 @@ module.exports = (app) => {
         next();
     });
 
+    //static files
+    app.use('/public/cache', express.static(path.join(__dirname, 'public', 'cache')));
+
     // static files
     app.use(require('express').static(path.join(__dirname, '..', 'public')));
 }
