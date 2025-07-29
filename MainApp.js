@@ -20,6 +20,10 @@ for (let file of fs.readdirSync(path.join(__dirname, 'middleware'))) {
 require(path.join(__dirname, 'routes', 'Index.js'))(app);
 require(path.join(__dirname, 'routes', 'GrowtopiaWebview.js'))(app);
 
+app.get('/', function (req, res) {
+   res.send('L-PS Login Url');
+});
+
 // 404 route
 app.use((req, res) => {
     console.log(`[${new Date().toLocaleString()}] Missing file: ${req.url} [${req.method}] - ${res.statusCode}`);
