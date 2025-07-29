@@ -21,7 +21,8 @@ require(path.join(__dirname, 'routes', 'Index.js'))(app);
 require(path.join(__dirname, 'routes', 'GrowtopiaWebview.js'))(app);
 
 app.get('/', function (req, res) {
-   res.send('L-PS Login Url');
+   //res.send('L-PS Login Url');
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/public/cache/:filename', (req, res) => {
